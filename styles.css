@@ -1,5 +1,51 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@500&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+.off {
+  z-index: -10;
+  opacity: 0;
+}
+.on {
+  z-index: 1;
+  opacity: 1;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+.relogioLayout {
+  text-align: center;
+  color: rgb(13, 130, 184);
+}
+#relogio{
+    font-size: 5rem;
+    font-family: 'Audiowide', cursive;
+}
+#data{
+    margin-bottom: 15px;
+}
+#comecar{
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 5px 30px;
+    font-size: large;
+    text-transform: uppercase;
+    color: white;
+    background-color: lightslategrey;
+    outline: none;
+    cursor:pointer;
+}
+#comecar:hover{
+    background-color: rgb(91, 105, 119);
 }
