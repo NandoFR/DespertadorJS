@@ -6,9 +6,6 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
-body{
-    background-color: black;
-}
 .off {
   z-index: -10;
   opacity: 0;
@@ -29,7 +26,7 @@ body{
 }
 .relogioLayout {
   text-align: center;
-  color: rgb(13, 130, 184);
+  color:dodgerblue;
 }
 #relogio{
     font-size: 5rem;
@@ -61,4 +58,63 @@ body{
     height: 450px;
     background-color: rgb(39, 37, 37);
     border-radius: 4px;
+    color:dodgerblue;
+}
+.menuInfo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.menuHeader{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: rgb(58, 54, 54);
+    border-radius: 4px 4px 0 0;
+}
+#menuFechar{
+    border:none;
+    background:none;
+    font-size: large;
+    text-shadow: 0 0 10px dodgerblue ;
+    color:dodgerblue;
+    cursor: pointer;
+}
+.menuSelect{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100px;
+    align-items: center;
+}
+.selectH{
+    display: flex;
+}
+.selectM{
+    display: flex;
+}
+#selectHoras,#selectMin{
+    padding: 5px 20px;
+    outline: none;
+    background: none;
+    color: white;
+    border: 1px solid white;
+}
+.optionH,.optionM{
+    color: black;
+}
+.menuFooter{
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 20px;
+}
+#testeAlarme,#Cancelar,#Iniciar{
+    background: none;
+    border: 1px solid white;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    color: dodgerblue;
+    outline: none;
+    cursor: pointer;
 }

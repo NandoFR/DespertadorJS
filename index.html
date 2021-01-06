@@ -1,28 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DespertadorJS</title>
     <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <div class="relogioLayout">
-        <h1 id="relogio"></h1>
-        <h1 id="data"></h1>
-        <button id="comecar" type="button">começar</button>
-      </div><!--relogioLayout-->`
-      
-      <div class="menuLayout off" id="menuLayout">
-          <div class="menuHeader">
-              <h1>Menu</h1>
-              <button type="button" id="menuFechar">X</button>
-          </div>
-  
-      </div>
+        <div class="relogioLayout">
+            <h1 id="relogio"></h1>
+            <h1 id="data"></h1>
+            <button id="comecar" type="button">começar</button>
+        </div><!--relogioLayout-->`
+
+        <div class="menuLayout off" id="menuLayout">
+            <div class="menuInfo">
+            <div class="menuHeader">
+                <h1>Configurar Alarme</h1>
+                <button type="button" id="menuFechar">X</button>
+            </div><!--menuHeader-->
+
+            <div class="menuSelect">
+                <div class="selectH">
+                    <h2>Horas:</h2>
+                    <select name="selectHoras" id="selectHoras"></select>
+                </div><!--selectH-->
+                <div class="selectM">
+                    <h2>Minutos:</h2>
+                    <select name="selectMin" id="selectMin"></select>
+                </div><!--selectM-->
+            </div><!--menuSelect-->
+            <div class="menuFooter">
+                <button id="testeAlarme">Teste</button>
+                <div>
+                    <button id="Cancelar">Cancelar</button>
+                    <button id="Iniciar">Iniciar</button>
+                </div>
+            </div><!--menuFooter-->
+            </div><!--MenuInfo-->
+        </div><!--menuLayout-->
     </div><!--container-->
 
     <script src="main.js"></script>
-  </body>
+</body>
+
 </html>

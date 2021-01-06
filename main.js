@@ -3,6 +3,8 @@ const data = document.getElementById('data');
 const comecar = document.getElementById('comecar');
 const menuLayout = document.getElementById('menuLayout');
 const menuFechar = document.getElementById('menuFechar');
+const selectHoras = document.getElementById('selectHoras');
+const selectMin = document.getElementById('selectMin');
 
 // Definir horario na div
 const horario = () => {
@@ -42,7 +44,7 @@ const datas = () => {
             diasS = 'Sexta-Feira'
             break;
         case 6:
-            diasS = 'Sabado'
+            diasS = 'Sábado'
     }
     switch (m) {
         case 0:
@@ -83,18 +85,34 @@ const datas = () => {
             break;
     }
     data.innerText = diasS + ', ' + diaM + ' de ' + m + ' de ' + a
-
-
-
-    console.log(diasS)
+}
+//Criar as Options dentro do selectHoras
+const selectH = () =>{
+    for(i=0;i<24;i++){
+        let o = document.createElement('option');
+        o.value = i;
+        i<10?o.innerText='0'+i:o.innerText=i;
+        o.classList.add('optionH')
+        selectHoras.appendChild(o);
+    }
+}
+//Criar as Options dentro do selectMin
+const selectM = () =>{
+    for(i=0;i<60;i++){
+        let o = document.createElement('option');
+        o.value = i;
+        i<10?o.innerText='0'+i:o.innerText=i;
+        o.classList.add('optionM')
+        selectMin.appendChild(o);
+    }
 }
 
-//Eventos do button Começar
+//Evento do button Começar
 comecar.addEventListener('click',()=>{
     menuLayout.classList.remove('off');
     menuLayout.classList.add('on');
 });
-//Eventos do button menuFechar
+//Evento do button menuFechar
 menuFechar.addEventListener('click',()=>{
     menuLayout.classList.remove('on');
     menuLayout.classList.add('off');
@@ -102,6 +120,8 @@ menuFechar.addEventListener('click',()=>{
 
 
 
-horario();
+horario()
 datas()
+selectH()
+selectM()
 window.setInterval(horario, 1000, datas, 5000)
