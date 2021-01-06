@@ -6,12 +6,15 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+body{
+    background-color: black;
+}
 .off {
   z-index: -10;
   opacity: 0;
 }
 .on {
-  z-index: 1;
+  z-index: 10;
   opacity: 1;
 }
 .container {
@@ -48,4 +51,14 @@
 }
 #comecar:hover{
     background-color: rgb(91, 105, 119);
+}
+.menuLayout{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    height: 450px;
+    background-color: rgb(39, 37, 37);
+    border-radius: 4px;
 }

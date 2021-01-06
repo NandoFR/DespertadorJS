@@ -1,6 +1,8 @@
 const relogio = document.getElementById('relogio');
 const data = document.getElementById('data');
 const comecar = document.getElementById('comecar');
+const menuLayout = document.getElementById('menuLayout');
+const menuFechar = document.getElementById('menuFechar');
 
 // Definir horario na div
 const horario = () => {
@@ -86,17 +88,20 @@ const datas = () => {
 
     console.log(diasS)
 }
-//Abrir uma janela
-const open = () => {
 
-}
-//Fechar uma janela
-const close = () => {
+//Eventos do button Começar
+comecar.addEventListener('click',()=>{
+    menuLayout.classList.remove('off');
+    menuLayout.classList.add('on');
+});
+//Eventos do button menuFechar
+menuFechar.addEventListener('click',()=>{
+    menuLayout.classList.remove('on');
+    menuLayout.classList.add('off');
+});
 
-}
 
-window.setInterval(horario, 1000, datas, 10000)
-window.onload = () => {
-    horario();
-    datas();
-}
+
+horario();
+datas()
+window.setInterval(horario, 1000, datas, 5000)
