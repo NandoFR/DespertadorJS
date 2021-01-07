@@ -131,7 +131,7 @@ const somParar = () => {
 }
 //Tocar o som do alarme quando clicar no icone volume
 const volumeTocar = () => {
-    somToca r()
+    somTocar()
     volume.classList.remove('fa-volume-off');
     volume.classList.add('fa-volume-up');
     volume.removeEventListener('click', volumeTocar);
