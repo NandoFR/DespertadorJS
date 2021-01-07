@@ -14,6 +14,10 @@
   z-index: 10;
   opacity: 1;
 }
+.alarmeOn{
+    z-index: 11;
+    opacity: 1;
+}
 .container {
   width: 100%;
   height: 100vh;
@@ -80,6 +84,7 @@
     text-shadow: 0 0 10px dodgerblue ;
     color:dodgerblue;
     cursor: pointer;
+    outline: none;
 }
 .menuSelect{
     display: flex;
@@ -109,7 +114,7 @@
     margin-top: auto;
     padding: 20px;
 }
-#testeAlarme,#Cancelar,#Iniciar{
+#testeAlarme,#Cancelar,#Iniciar,#cancelarAlarme{
     background: none;
     border: 1px solid white;
     padding: 5px 20px;
@@ -117,4 +122,52 @@
     color: dodgerblue;
     outline: none;
     cursor: pointer;
+}
+
+#volume{
+    margin-left: 10px;
+    font-size: 1.5rem;
+    cursor:pointer
+}
+#alarmeTocando{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+    height: 450px;
+    background-color: rgb(39, 37, 37);
+    border-radius: 4px;
+    color:dodgerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.relogioTocando{
+    display: flex;
+    margin: 40px 0;
+}
+.tituloAlarme{
+    display: flex;
+    padding: 0 30px;
+    margin: 50px 0;
+    font-size: 1.5rem;
+}
+#horaDefinida,#minutoDefinido{
+    font-size: 6rem;
+}
+#titulo{
+    width: 100%;
+    font-size: 1.5rem;
+    outline: none;
+    background-color: rgb(39, 37, 37);
+    border: 1px solid white;
+    color: white;
+    padding-left: 5px;
+}
+.definidoPara{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

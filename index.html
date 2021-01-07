@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DespertadorJS</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/395449a2ad.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
         <div class="relogioLayout">
+            <div class="definidoPara">
+                <h1 id="alarmeDefinido"></h1>
+                <h1 id="alarmeDefinidoMin"></h1>
+            </div>
             <h1 id="relogio"></h1>
             <h1 id="data"></h1>
             <button id="comecar" type="button">começar</button>
@@ -33,8 +38,15 @@
                     <select name="selectMin" id="selectMin"></select>
                 </div><!--selectM-->
             </div><!--menuSelect-->
+            <div class="tituloAlarme">
+                <h2>Titulo:</h2>
+                <input maxlength="24" type="text" id="titulo">
+            </div>
             <div class="menuFooter">
-                <button id="testeAlarme">Teste</button>
+                <div class="teste">
+                <button id="testeAlarme">Teste Alarme</button>
+                    <i id="volume" class="fas fa-volume-off"></i>
+                </div>
                 <div>
                     <button id="Cancelar">Cancelar</button>
                     <button id="Iniciar">Iniciar</button>
@@ -42,8 +54,17 @@
             </div><!--menuFooter-->
             </div><!--MenuInfo-->
         </div><!--menuLayout-->
+        <div class="off" id="alarmeTocando">
+            <h1 id="tituloDefinido"></h1>
+            <div class="relogioTocando">
+                <h1 id="horaDefinida"></h1>
+                <h1 id="minutoDefinido"></h1>
+            </div><!--relogioTocando-->
+            <button id="cancelarAlarme">Cancelar</button>
+        </div><!--alarmeTocando-->
     </div><!--container-->
 
+    <audio loop id="alarme" src="alarm.mp3"></audio>
     <script src="main.js"></script>
 </body>
 
