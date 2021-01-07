@@ -122,7 +122,6 @@ const selectM = () => {
 }
 //Tocar o som do alarme
 const somTocar = () => {
-    alarme.currentTime = 0;
     alarme.play();
 }
 //Parar o som do alarme
@@ -196,6 +195,7 @@ const startAlarme = ()=>{
     podeTocar=true;
     logicAlarme()
 }
+//Logica do alarme
 const logicAlarme = ()=>{
     let d = new Date();
     let sh = selectHoras.value;
